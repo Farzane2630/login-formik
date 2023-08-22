@@ -17,7 +17,7 @@ https://github.com/Farzane2630/login-formik/assets/110881082/523fea59-8af7-4662-
 
 ## Tech Stack
 
-![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=plastic&logo=css3&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=plastic&logo=html5&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=plastic&logo=javascript&logoColor=%23F7DF1E) ! ![React](https://img.shields.io/badge/react-%2320232a.svg?style=plastic&logo=react&logoColor=%2361DAFB) ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=plastic&logo=SASS&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-hotpink.svg?style=plastic&logo=typescript&logoColor=white) ![Formik](https://img.shields.io/badge/Formik-hotpink.svg?style=plastic&logo=formik&logoColor=white) ![Yup](https://img.shields.io/badge/yup-hotpink.svg?style=plastic&logo=yup&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=plastic&logo=css3&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=plastic&logo=html5&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=plastic&logo=javascript&logoColor=%23F7DF1E) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=plastic&logo=react&logoColor=%2361DAFB) ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=plastic&logo=SASS&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-%23323330.svg?style=plastic&logo=typescript&logoColor=white) ![Formik](https://img.shields.io/badge/Formik-%2320232a.svg?style=plastic&logo=formik&logoColor=%2361DAFB) ![Yup](https://img.shields.io/badge/yup-%23E34F26.svg?style=plastic&logo=yup&logoColor=%23F7DF1E)
 
 
 
