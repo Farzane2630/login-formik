@@ -65,6 +65,8 @@
             padding-left: 4px;
           }
         }
+
+        // when inputs are not valid
         .error {
           border: rgb(254, 61, 61) solid thin;
           box-shadow: rgba(128, 212, 245, 0.2) 0px 2px 8px 0px;
@@ -123,4 +125,11 @@
     letter-spacing: 6px;
     opacity: 0.6;
   }
+}
+
+.error_message {
+  color: rgb(254, 61, 61);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: lighter;
 }

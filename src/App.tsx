@@ -1,4 +1,4 @@
-import { Field, Form, Formik } from 'formik'
+import { ErrorMessage, Field, Form, Formik } from 'formik'
 import './App.scss'
 
 interface formValues {
@@ -55,14 +55,14 @@ function App() {
             {({ errors, touched, isSubmitting }) => (
               <Form className='form_parent'>
                 <label className='lable' htmlFor="name">Your name</label>
-                {errors.name && touched.name && errors.name}
-                <Field type="text" name='name' placeholder='First Last' className='name' />
+                {errors.name && touched.name && <ErrorMessage className="error_message" name="name" component="p" />}
+                <Field type="text" name='name' placeholder='First Last' className={`name ${errors.name && touched.name && 'error'}`} />
                 <label className='lable' htmlFor="email">Email</label>
-                {errors.email && touched.email && errors.email}
-                <Field type="text" name='email' placeholder='you@email.com' className='email' />
+                {errors.email && touched.email && <ErrorMessage className="error_message" name="email" component="p" />}
+                <Field type="text" name='email' placeholder='you@email.com' className={`email ${errors.email && touched.email && 'error'}`} />
                 <label className='lable' htmlFor="password">Password</label>
-                {errors.password && touched.password && errors.password}
-                <Field type="password" name='password' placeholder='⚫⚫⚫⚫⚫⚫⚫⚫' className='password' />
+                {errors.password && touched.password && <ErrorMessage className="error_message" name="password" component="p" />}
+                <Field type="password" name='password' placeholder='⚫⚫⚫⚫⚫⚫⚫⚫' className={`password ${errors.password && touched.password && 'error'}`} />
 
                 <button className="create_account" type='submit' disabled={isSubmitting}>
                   Create Account
