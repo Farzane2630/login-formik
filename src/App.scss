@@ -7,19 +7,120 @@
   column-gap: $col;
 }
 
+@mixin typography($size, $family, $weight, $color, $align) {
+  font-size: $size;
+  font-family: $family;
+  font-weight: $weight;
+  color: $color;
+  text-align: $align;
+}
+
 .body_wrapper {
   background-color: rgb(210, 210, 247);
   @include d-f(row, center, center, _, _);
-  padding: 36px;
+  padding: 200px 350px;
   width: inherit;
-  height: 100lvh;
+  max-height: 100vh;
 
   .form_wrapper {
-background-color: #fff;
-border: none;
-border-radius: 25px;
-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-width: 100%;
-height: 100%;
+    @include d-f(row, space-between, center, _, _);
+    background-color: #fff;
+    border: none;
+    border-radius: 25px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 50px 100px;
+    width: 100%;
+    height: 100%;
+
+    .form {
+      @include d-f(column, center, center, 30px, _);
+      width: 60%;
+      font-family: "Brush Script MT", cursive !important;
+
+      .title {
+        @include typography(40px, inherit, 800, #23037a, center);
+      }
+      .subtitle {
+        @include typography(16px, inherit, 400, #5c22fb, center);
+      }
+      .form_parent {
+        width: 300px;
+        @include d-f(column, center, flex-start, 5px, _);
+        .lable {
+          @include typography(12px, inherit, 600, #333335, left);
+        }
+        input {
+          width: 100%;
+          height: 32px;
+          margin-bottom: 10px;
+          border: #333335 solid thin;
+          border-radius: 6px;
+          outline: none;
+          &:focus {
+            border: #4db0f7f6 solid thin;
+            box-shadow: rgba(128, 212, 245, 0.2) 0px 2px 8px 0px;
+          }
+
+          &::placeholder {
+            padding-left: 4px;
+          }
+        }
+        .error {
+          border: rgb(254, 61, 61) solid thin;
+          box-shadow: rgba(128, 212, 245, 0.2) 0px 2px 8px 0px;
+
+          &:focus {
+            border-color: rgb(254, 61, 61);
+          }
+        }
+
+        button {
+          margin-bottom: 10px;
+          width: 100%;
+          height: 35px;
+          margin-bottom: 10px;
+          border-radius: 6px;
+          border: none;
+          background-color: #7f57efdc;
+          color: #ffffffce;
+          cursor: pointer;
+          &:hover {
+            box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+              rgba(123, 122, 122, 0.15) 0px -36px 30px 0px inset,
+              rgba(97, 96, 96, 0.1) 0px -79px 40px 0px inset,
+              rgba(37, 37, 37, 0.06) 0px 2px 1px,
+              rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+              rgba(0, 0, 0, 0.09) 0px 16px 8px,
+              rgba(28, 28, 28, 0.09) 0px 32px 16px;
+            color: #fff;
+          }
+        }
+
+        .log_in {
+          background-color: #4148676e;
+        }
+      }
+    }
+
+    .img_wrapper {
+      width: 30%;
+      height: 100%;
+      padding: 10px 25px;
+      .img {
+        width: 100%;
+        height: 100% !important;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+// utilities:
+.password {
+  &::placeholder {
+    font-size: 5px;
+    font-weight: bold;
+    letter-spacing: 6px;
+    opacity: 0.6;
   }
 }
