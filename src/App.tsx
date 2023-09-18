@@ -31,6 +31,7 @@ export const App: React.FC<{}> = () => {
   const initialValues: formValues = { email: '', name: '', password: "" }
 
   return (
+    
     <div className='body_wrapper'>
       <div className="form_wrapper">
         <div className="form">
@@ -49,46 +50,26 @@ export const App: React.FC<{}> = () => {
               }, 400);
             }}
             validationSchema={validationSchema}
-          // validate={values => {
-          //   const errors: { name?: string, email?: string, password?: string } = {}
-
-          //   if (!values.name) {
-          //     errors.name = "Required"
-          //   } else if (values.name.length < 3 || values.name.length > 15) {
-          //     errors.name = "name must be more than 3 and less than 15 letters"
-          //   }
-          //   if (!values.password) {
-          //     errors.password = "Required"
-          //   } else if (values.password.length < 8 || values.password.length > 15) {
-          //     errors.password = "password must be more than 8 and less than 15 letters"
-          //   }
-
-          //   if (!values.email) {
-          //     errors.email = "Required"
-          //   } else if (
-          //     !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-          //   ) {
-          //     errors.email = 'Invalid email address';
-          //   }
-
-          //   return errors;
-          // }}
+         
           >
             {({ errors, touched, isSubmitting }) => (
               <Form className='form_parent'>
                 <label className='lable' htmlFor="name">Your name</label>
-                <ErrorMessage className="error_message" name="name" component="p" />
                 <Field type="text" name='name' placeholder='First Last' className={`name ${errors.name && touched.name && 'error'}`} />
+                <ErrorMessage className="error_message" name="name" component="p" />
+                
                 <label className='lable' htmlFor="email">Email</label>
-                <ErrorMessage className="error_message" name="email" component="p" />
                 <Field type="text" name='email' placeholder='you@email.com' className={`email ${errors.email && touched.email && 'error'}`} />
+                <ErrorMessage className="error_message" name="email" component="p" />
+
                 <label className='lable' htmlFor="password">Password</label>
-                <ErrorMessage className="error_message" name="password" component="p" />
                 <Field type="password" name='password' placeholder='⚫⚫⚫⚫⚫⚫⚫⚫' className={`password ${errors.password && touched.password && 'error'}`} />
+                <ErrorMessage className="error_message" name="password" component="p" />
 
                 <button className="create_account" type='submit' disabled={isSubmitting}>
                   Create Account
                 </button>
+
                 <button type='button' className="log_in">
                   Log in
                 </button>
@@ -97,9 +78,11 @@ export const App: React.FC<{}> = () => {
             }
           </Formik>
         </div>
+
         <div className="img_wrapper">
           <img src="src/assets/pic.png" className='img' alt="img" />
         </div>
+
       </div>
 
     </div>
